@@ -11,8 +11,11 @@ angular
   }])
 
   .controller('ContactsController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+    var vm = this;
     var ref = firebase.database().ref();
-    $scope.contacts = $firebaseArray(ref);
+    vm.contacts = $firebaseArray(ref);
 
-    debugger;
+    $scope.showAddForm = function() {
+      $scope.addFormShow = true;
+    }
   }]);
