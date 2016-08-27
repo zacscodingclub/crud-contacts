@@ -22,6 +22,10 @@ angular
       $scope.editFormShowFlag = false;
     }
 
+    $scope.anyPopUps = function() {
+      return $scope.addFormShowFlag || $scope.contactShowFlag || $scope.editFormShowFlag;
+    }
+
 // Add Contact Functioniality
     $scope.showAddForm = function() {
       $scope.addFormShowFlag = true;
@@ -107,7 +111,7 @@ angular
           $scope.editContactForm.$setPristine();
 
           $scope.hide();
-          $scope.msg = "Contact Updated";
+          vm.msg = "Contact Updated";
         })
 
     }
@@ -122,6 +126,8 @@ angular
 // Show Contact Functionality
 
     $scope.showContact = function(contact) {
+      $scope.contactShowFlag = true;
+
       $scope.name           = contact.name;
       $scope.company        = contact.company;
       $scope.email          = contact.email;
@@ -132,7 +138,5 @@ angular
       $scope.city           = contact.address[0].city || null;
       $scope.state          = contact.address[0].state || null;
       $scope.zipcode        = contact.address[0].zipcode || null;
-
-      $scope.contactShowFlag = true;
     }
   }]);
