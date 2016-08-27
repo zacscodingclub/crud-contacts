@@ -11,8 +11,8 @@ angular
   }])
 
   .controller('ContactsController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
-    var ref = new Firebase('https://crud-contacts.firebaseio.com/contacts');
-
+    var ref = firebase.database().ref();
     $scope.contacts = $firebaseArray(ref);
-    console.log($scope.contacts);
+
+    debugger;
   }]);

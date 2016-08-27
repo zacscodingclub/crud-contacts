@@ -31,10 +31,21 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBnfN0Abo8xf2Fk2YqbTcj0mkTZ73KblwU",
+      authDomain: "crud-contacts.firebaseapp.com",
+      databaseURL: "https://crud-contacts.firebaseio.com",
+      storageBucket: "crud-contacts.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
-  <script src="bower_components/firebase/firebase.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
